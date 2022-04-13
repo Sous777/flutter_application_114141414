@@ -43,28 +43,37 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Container(
-              decoration: const BoxDecoration(color: Colors.grey),
-              padding: const EdgeInsets.all(30.0),
+              decoration: BoxDecoration(color: Colors.grey, borderRadius: BorderRadius.circular(19)),
               margin: const EdgeInsets.all(40.0),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const CircleAvatar(
-                    child: (Text('VP')),
-                    backgroundColor: Colors.purple,
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        const CircleAvatar(
+                          child: (Text('VP')),
+                          backgroundColor: Colors.purple,
+                        ),
+                        const SizedBox(
+                          width: 16,
+                        ),
+                        Column(
+                      children: const [
+                        Text('gggg'),
+                        Text('gggvavavavg'),
+                        Text('gagagaggg'),
+                      ],
+                       mainAxisAlignment: MainAxisAlignment.start,
+                       crossAxisAlignment: CrossAxisAlignment.start,
+                    ),
+                      ],
+                    ),
                   ),
-                  Column(
-                    children: const [
-                      //Center(
-                      //  child:Center(),
-                      //),
-                      //SizedBox(height: 0),
-                      Text('gggg'),
-                      Text('gggvavavavg'),
-                      Text('gagagaggg'),
-                    ],
-                  ),
+                  
                   IconButton(
-                    padding:(const EdgeInsets.symmetric(horizontal: 105.0)),
                       onPressed: () {}, icon: const Icon(Icons.alarm)),
                 ],
               ),
@@ -73,6 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
           backgroundColor: const Color(0xFFffd800),
           child: const Icon(Icons.add),
+          elevation: 0.0,
           onPressed: () {
             //
           }),
@@ -80,3 +90,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
